@@ -1,0 +1,63 @@
+.payment {
+  margin: 7rem 10rem;
+  &__section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__heading {
+      margin: 2rem 0 2rem 0;
+
+      @include respond(phone) {
+        font-weight: 600;
+        font-size: 3rem;
+        margin: 2rem 0 2rem 0;
+      }
+
+      @include respond(small-phone) {
+        font-weight: 500;
+        margin: 2rem 0 2rem 0;
+      }
+    }
+    &__card {
+      padding: 5rem 2rem;
+
+      background-color: $color-white;
+
+      @include respond(small-phone) {
+        margin-top: 1rem;
+        width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      }
+
+      &__link {
+        display: block;
+        text-align: center;
+        font-size: 3rem;
+        font-weight: 600;
+        color: $color-primary;
+        text-decoration: none;
+      }
+
+      &__button {
+        width: 100%;
+      }
+
+      &__info {
+        display: block;
+        text-align: center;
+        margin: 0 0 5rem 0;
+        font-size: 3rem;
+
+        @include respond(small-phone) {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+
+  @include respond(small-phone) {
+    margin: 1rem 1rem;
+  }
+}

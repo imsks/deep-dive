@@ -1,9 +1,23 @@
-@import "abstracts/variables";
-@import "abstracts/mixins";
+@import 'abstracts/mixin';
+@import 'abstracts/variables';
 
-@import "base/base";
-@import "base/typography";
-@import "base/utilities";
-@import "base/rsuit";
+@import 'base/base';
+@import 'base/typography';
 
-@import "layout/navigation";
+@import 'layout/navigation';
+@import 'layout/footer';
+
+@import 'components/buttons';
+@import 'components/form';
+@import 'components/help-steps';
+
+@import 'sections/why-we-started';
+@import 'sections/pricing';
+@import 'sections/betatag';
+
+@import 'pages/home';
+@import 'pages/tutor-registration';
+@import 'pages/student-registration';
+@import 'pages/contact-us';
+@import 'pages/privacy-policy';
+@import 'pages/payment';

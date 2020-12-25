@@ -1,22 +1,25 @@
 *,
 *::after,
 *::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
 }
 
 html {
-  font-size: 62.5%;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
 }
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
-body {
-  box-sizing: border-box;
-  font-family: Poppins !important;
 
-  @include respond(small-phone) {
-    padding: 0;
-  }
+body {
+    font-family: Roboto, Segoe UI, sans-serif;
+    box-sizing: border-box;
+    background: $color-background;
+    color: $color-primary;
+
+    &::selection {
+        color: $color-secondary;
+    }
 }
 
 @include selectionTextGlobal;

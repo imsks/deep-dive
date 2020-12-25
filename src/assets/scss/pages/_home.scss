@@ -1,0 +1,151 @@
+.virgintutor {
+  &__main {
+    &__section {
+      &__head {
+        height: 91vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &__image {
+          width: 40%;
+          margin: 2rem 0 0 0;
+
+          @include respond(tab-port) {
+            width: 60%;
+          }
+
+          @include respond(phone) {
+            width: 90%;
+          }
+        }
+
+        &__title {
+          margin: 4rem 0 0 0;
+          font-weight: 600;
+
+          @include respond(tab-port) {
+            text-align: center;
+            margin: 5rem 2rem 1rem 2rem;
+            font-size: 3rem;
+            font-weight: 600;
+          }
+
+          @include respond(phone) {
+            font-weight: 600;
+            margin: 5rem 1rem 1rem 1rem;
+          }
+
+          @include respond(small-phone) {
+            text-align: center;
+            margin: 5rem 2rem 1rem 2rem;
+            font-size: 3rem;
+            font-weight: 600;
+          }
+        }
+
+        &__subtitle {
+          font-size: 2.5rem;
+          font-weight: 500;
+          margin: 0rem 0 2rem 0;
+
+          @include respond(tab-port) {
+            text-align: center;
+            margin: 1rem 2rem 1rem 2rem;
+            font-size: 1.6rem;
+            font-weight: 500;
+          }
+
+          @include respond(phone) {
+            font-weight: 500;
+            margin: 1rem 1rem 2rem 1rem;
+          }
+
+          @include respond(small-phone) {
+            text-align: center;
+            margin: 1rem 2rem 1rem 2rem;
+            font-size: 1.6rem;
+            font-weight: 500;
+          }
+        }
+
+        &__button {
+          margin: 1rem 0 4rem 0;
+        }
+      }
+
+      &__components {
+        padding: 5rem 0;
+        margin: 5rem;
+        display: grid;
+        gap: 2rem;
+        justify-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+
+        @include respond(phone) {
+          margin: 0 2rem;
+        }
+
+        @include respond(small-phone) {
+          grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        }
+
+        &__student {
+          height: auto;
+          width: 100%;
+          background-color: $color-white;
+          box-shadow: 10px 10px 10px rgba($color: $color-black, $alpha: 0.1);
+          transition: all 0.5s;
+          border-radius: 0.5rem;
+          display: grid;
+          gap: 0.5rem;
+          justify-items: center;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+          &__image {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-items: center;
+            &__item {
+              max-width: 100%;
+              margin: auto;
+            }
+          }
+
+          &__content {
+            margin: 4rem 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            &__heading {
+              margin: 0 0;
+            }
+
+            &__subheading {
+              margin: 0 0;
+            }
+
+            &__link {
+              text-decoration: none;
+              color: $color-white;
+            }
+
+            &__button {
+              width: 100%;
+              margin-top: 2.5rem;
+              padding: 1.5rem;
+              font-size: 3rem;
+              font-weight: 600;
+            }
+          }
+
+          &:hover {
+            box-shadow: 5px 5px 10px rgba($color: $color-black, $alpha: 0.1);
+          }
+        }
+      }
+    }
+  }
+}

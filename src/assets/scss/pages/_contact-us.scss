@@ -1,0 +1,55 @@
+.contactus {
+    margin: 5rem 10rem;
+    &__section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &__heading {
+            margin: 2rem 0 2rem 0;
+
+            @include respond(phone) {
+                font-weight: 600;
+                font-size: 3rem;
+                margin: 2rem 0 2rem 0;
+            }
+
+            @include respond(small-phone) {
+                font-weight: 500;
+                margin: 2rem 0 2rem 0;
+            }
+        }
+        &__card {
+            padding: 5rem 2rem;
+            margin-top: 5rem;
+            background-color: $color-white;
+            border-radius: 0.2rem;
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+
+            @include respond(small-phone) {
+                width: 100%;
+                grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            }
+
+            &__link {
+                display: block;
+                text-align: center;
+                font-size: 3rem;
+                font-weight: 600;
+                color: $color-primary;
+                text-decoration: none;
+            }
+
+            &__button  {
+                width: 100%;
+            }
+        }
+    }
+
+    @include respond(small-phone) {
+        margin: 5rem 1rem;
+    }
+}

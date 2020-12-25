@@ -1,0 +1,12 @@
+.betatag {
+    background-color: $color-black;
+    color: $color-white;
+    padding: 2rem 0;
+    
+    display: flex;
+    justify-content: center;
+
+    &__heading {
+        margin: 0 2rem;
+    }
+}

@@ -1,0 +1,52 @@
+.btn {
+    background-color: $color-primary;
+    color: $color-white;
+    text-decoration: none;
+    box-shadow: 5px 10px 20px rgba($color: $color-black, $alpha: 0.4);
+    transition: all 0.5s;
+    border: none;
+    outline : none;
+    cursor: pointer;
+
+    &-lg {
+        padding: 1.6rem 5rem;
+        font-size: 3rem;
+        font-weight: 600;
+        border-radius: 0.3rem;
+
+        @include respond(tab-port) {
+            padding: 1.5rem 4rem;
+            font-size: 2rem;
+            font-weight: 500;
+        }
+
+        @include respond(small-phone) {
+            padding: 1.5rem 3rem;
+            font-size: 2rem;
+            font-weight: 500;
+        }
+    }
+
+    &-md {
+        padding: 1rem 1.5rem;
+        font-size: 2rem;
+        font-weight: 500;
+        border-radius: 0.3rem;
+    }
+
+    &-sm {
+        background-color: $color-secondary;
+        color: $color-primary;
+        padding: 0.5rem 1.5rem;
+        font-size: 2rem;
+        font-weight: 500;
+        border-radius: 0.3rem;
+    }
+
+    &:hover {
+        background-color: rgba($color: $color-primary, $alpha: 0.8);
+        color: $color-white;
+        box-shadow: 5px 10px 20px rgba($color: $color-black, $alpha: 0.2);
+    }
+    
+}

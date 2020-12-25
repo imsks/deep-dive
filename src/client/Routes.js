@@ -1,5 +1,6 @@
 import App from './App';
-import HomePage from './pages/HomePage';
+import Homepage from './pages/Homepage';
+import StudentRegister from './pages/StudentRegister';
 
 export default [
   {
@@ -8,7 +9,17 @@ export default [
     ...App,
     routes: [
       {
-        ...HomePage,
+        ...Homepage,
+      },
+    ],
+  },
+  {
+    path: '/register',
+    exact: true,
+    ...App,
+    routes: [
+      {
+        ...StudentRegister,
       },
     ],
   },

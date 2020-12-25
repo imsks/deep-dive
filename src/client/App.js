@@ -1,17 +1,16 @@
 import React from 'react';
 import { renderRoutes } from 'react-router-config';
 import PropTypes from 'prop-types';
-// imports for themes and styles
-import { ThemeProvider } from 'styled-components';
-import { GlobalStyle } from './style-components/global';
-import { lightTheme } from './style-components/theme';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 const App = ({ route }) => {
   return (
-    <ThemeProvider theme={lightTheme}>
-      <GlobalStyle />
+    <div>
+      <Navbar />
       {renderRoutes(route.routes)}
-    </ThemeProvider>
+      <Footer />
+    </div>
   );
 };
 

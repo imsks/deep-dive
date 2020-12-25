@@ -1,0 +1,88 @@
+.team {
+    background-color: linear-gradient(to right, rgb(83, 250, 222), #43ce99);
+    color: $color-primary;
+    padding: 5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &__heading {
+        margin-bottom: 2rem;
+    }
+
+    &__content {
+        width: 100%;
+        margin: 1rem 0;
+        display: grid;
+        gap: 2rem;
+        justify-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+
+        @include respond(small-phone) {
+            margin: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        }
+
+        &__item {
+            background-color: $color-white;
+            padding: 4rem;
+            border-radius: 0.5rem;
+            box-shadow: 1rem 1rem 5rem rgba($color: $color-black, $alpha: 0.2);
+            transition: 0.5s all;
+
+            @include respond(small-phone) {
+                padding: 3rem;
+            }
+
+            &:hover {
+                box-shadow: 2rem 2rem 5rem rgba($color: $color-black, $alpha: 0.3);
+            }
+
+            &__image {
+
+                width: 20rem;
+                height: 20rem;
+                border-radius: 50%;
+                display: block;
+                margin: 2rem auto;
+                box-shadow: 1rem 1rem 5rem rgba($color: $color-black, $alpha: 0.2);
+
+                @include respond(tab-land) {
+                    width: 15rem;
+                    height: 15rem;
+                }
+            }
+
+            &__heading {
+                @include respond(small-phone) {
+                    font-size: 2rem;
+                }
+                
+            }
+            
+            &__social{ 
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 1rem;
+
+                &__link {
+                    color: $color-primary;
+
+                    &:not(:first-child) {
+                        margin-left: 2rem;
+                    }
+
+                    &__item {
+                        font-size: 4rem;
+
+                        @include respond(small-phone) {
+                            font-size: 3.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
